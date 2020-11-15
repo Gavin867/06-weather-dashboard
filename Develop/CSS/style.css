@@ -9,19 +9,19 @@ body {
 }
 
 aside {
-    background-color: lightgray;
+    background-color: #F2F3F4 ;
 }
 
 section {
-    background-color: lightgray;
+    background-color: #F2F3F4 ;
 }
 
 .navbar {
-    width: auto;
     margin-bottom: 0;
     height: 8vh;
 }
 
 .row {
-    height: 90vh;
+    height: 92vh;
+    margin: 0;
 }
