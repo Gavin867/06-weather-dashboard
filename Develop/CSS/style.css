@@ -4,17 +4,9 @@ body {
     margin: 0;
     line-height: 1;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
+    font-size: x-large;
     width: 100%;
 }
-
-/* aside {
-    background-color: #F2F3F4 ;
-}
-
-section {
-    background-color: #F2F3F4 ;
-} */
 
 .navbar {
     margin-bottom: 0;
@@ -24,4 +16,8 @@ section {
 .row {
     height: 92vh;
     margin: 0;
+}
+
+.card {
+    font-size: x-large;
 }
