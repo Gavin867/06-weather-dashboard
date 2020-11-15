@@ -7,3 +7,21 @@ body {
     font-size: 16pt;
     width: 100%;
 }
+
+aside {
+    background-color: lightgray;
+}
+
+section {
+    background-color: lightgray;
+}
+
+.navbar {
+    width: auto;
+    margin-bottom: 0;
+    height: 8vh;
+}
+
+.row {
+    height: 90vh;
+}
