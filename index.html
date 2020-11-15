@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="./Develop/CSS/reset.css">
     <link rel="stylesheet" href="./Develop/CSS/style.css">
     <title>Weather Dashboard</title>
@@ -16,7 +18,7 @@
     <header class="navbar justify-content-center navbar-dark bg-dark text-light h1">
 
         <h1>Weather Dashboard</h1>
-    
+
     </header>
 
     <main class="row">
@@ -25,10 +27,20 @@
 
             <h2>Search for a City:</h2>
 
-            <form>
+            <form class="input-group">
 
-                <input type="text">
-            
+                <input type="text" class="form-control" placeholder="City name here">
+
+                <div class="input-group-append">
+
+                    <button id="searchBtn" class="btn btn-secondary" type="button">
+
+                        <i class="fa fa-search"></i>
+
+                    </button>
+
+                </div>
+
             </form>
 
             <table>[List of Cities]</table>
@@ -40,7 +52,7 @@
             <div>
 
                 <h2>[Current City Card]</h2>
-            
+
             </div>
 
             <div>
@@ -56,15 +68,15 @@
                     <li></li>
 
                     <li></li>
-                
+
                     <li></li>
-                
+
                 </ul>
 
             </div>
 
         </Section>
-    
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
