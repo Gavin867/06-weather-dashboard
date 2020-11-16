@@ -5,12 +5,14 @@ body {
     line-height: 1;
     font-family: 'Open Sans', sans-serif;
     font-size: x-large;
+    font-size: 1.5vw;
     width: 100%;
 }
 
 .navbar {
     margin-bottom: 0;
     height: 8vh;
+    width: 100%;
 }
 
 .row {
@@ -18,6 +20,26 @@ body {
     margin: 0;
 }
 
-.card {
+.list-group-item {
+    font-size: 1.5vw;
+}
+
+h2 {
     font-size: x-large;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+aside {
+    margin-left: 0;
+    background-color: lightgray;
+    padding: 3%;
+    height: 70vh;
+}
+
+
+#main-display {
+    height: 50vh;
+    padding: 5%;
+    line-height: 2;
 }

@@ -24,13 +24,13 @@
     <main class="row">
 
         <div class="col-3">
-            <aside class="card card-body mt-3">
+            <aside>
 
                 <h2>Search for a City:</h2>
 
                 <form class="input-group p-3">
 
-                    <input type="text" class="form-control" placeholder="City name here">
+                    <input type="text" class="form-control" placeholder="City name here...">
 
                     <div class="input-group-append">
 
@@ -44,22 +44,41 @@
 
                 </form>
 
-                <table>[List of Cities]</table>
+                <section id="city-list" class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Austin</li>
+                        <li class="list-group-item">Chicago</li>
+                        <li class="list-group-item">New York</li>
+                        <li class="list-group-item">Orlando</li>
+                        <li class="list-group-item">San Franciso</li>
+                        <li class="list-group-item">Seattle</li>
+                        <li class="list-group-item">Denver</li>
+                        <li class="list-group-item">Atlanta</li>
+                    </ul>
+                </section>
 
             </aside>
         </div>
 
         <div class="col-9">
 
-            <section>
-                <div>
+            <section id="main-display" class="card mt-3">
+                <div class="card-body">
 
-                    <h2>[Current City Card]</h2>
+                    <h2><span id="currentCityName">City X</span></h2>
+
+                    <p>Temperature: <span id="currentCityTemp">--</span>&deg F</p>
+
+                    <p>Humditiy: <span id="currenCityHumidity">--</span>%</p>
+
+                    <p>Wind Speed: <span id="windSpeed">--</span> mph <span id="windDirection">--</span></p>
+
+                    <p>UV Idex: <span id="uvIndex">--</span></p>
 
                 </div>
             </section>
 
-            <section>
+            <section id="secondary-display">
                 <div>
 
                     <h2>5-Day Forecast:</h2>
