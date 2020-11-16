@@ -2,11 +2,11 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    line-height: 1;
+    line-height: 1.5;
     font-family: 'Open Sans', sans-serif;
     font-size: x-large;
     font-size: 1.5vw;
-    width: 100%;
+    width: 100vw;
 }
 
 .navbar {
@@ -15,7 +15,7 @@ body {
     width: 100%;
 }
 
-.row {
+main {
     height: 92vh;
     margin: 0;
 }
@@ -34,7 +34,7 @@ aside {
     margin-left: 0;
     background-color: lightgray;
     padding: 3%;
-    height: 70vh;
+    height: 90vh;
 }
 
 
