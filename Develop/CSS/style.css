@@ -5,7 +5,6 @@ body {
     line-height: 1.5;
     font-family: 'Open Sans', sans-serif;
     font-size: x-large;
-    font-size: 1.5vw;
     width: 100vw;
 }
 
@@ -25,8 +24,11 @@ main {
 }
 
 h2 {
-    font-size: x-large;
-    font-size: 1.5vw;
+    font-size: xxx-large;
+    font-weight: bold;
+}
+
+h3 {
     font-weight: bold;
 }
 
@@ -42,4 +44,12 @@ aside {
     height: 50vh;
     padding: 5%;
     line-height: 2;
+    font-size: 20pt;
+}
+
+.five-day-card {
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: blue;
+    margin: 1%;
 }

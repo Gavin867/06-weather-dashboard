@@ -26,7 +26,7 @@
         <div class="col-3">
             <aside>
 
-                <h2>Search for a City:</h2>
+                <h3>Search for a City:</h2>
 
                 <form class="input-group p-3">
 
@@ -65,15 +65,19 @@
             <section id="main-display" class="card mt-3">
                 <div class="card-body">
 
-                    <h2><span id="currentCityName">City X</span></h2>
+                    <h2>
+                        <span id="currentCityName">Seattle</span> 
+                        (<span id="currentDay">01/01/2021</span>) 
+                        <span><i class="fas fa-cloud-sun"></i></span>
+                    </h2>
 
-                    <p>Temperature: <span id="currentCityTemp">--</span>&deg F</p>
+                    <p>Temperature: <span id="currentCityTemp">46</span>&deg F</p>
 
-                    <p>Humditiy: <span id="currenCityHumidity">--</span>%</p>
+                    <p>Humditiy: <span id="currenCityHumidity">30</span>%</p>
 
-                    <p>Wind Speed: <span id="windSpeed">--</span> mph <span id="windDirection">--</span></p>
+                    <p>Wind Speed: <span id="windSpeed">5</span> mph from the <span id="windDirection">NW</span></p>
 
-                    <p>UV Idex: <span id="uvIndex">--</span></p>
+                    <p>UV Idex: <span id="uvIndex">1.32</span></p>
 
                 </div>
             </section>
@@ -81,19 +85,70 @@
             <section id="secondary-display">
                 <div class="card-body">
 
-                    <h2>5-Day Forecast:</h2>
+                    <h3>5-Day Forecast:</h3>
 
-                    <ul>
+                    <ul class="row">
 
-                        <li></li>
+                        <li id="forecast1" class="card five-day-card">
+                            <div class="card-body">
+                                <h5><span id="forcastDate1">01/01/2021</span></h5>
 
-                        <li></li>
+                                <p><span id="forcastIcon1"><i class="fas fa-cloud-sun"></i></span></p>
 
-                        <li></li>
+                                <p>Temp: <span id="forcastTemp1">46</span>&deg F</p>
 
-                        <li></li>
+                                <p>Humditiy: <span id="forcastHumidity1">30</span>%</p>
+                            </div>
+                        </li>
 
-                        <li></li>
+                        <li id="forecast2" class="card five-day-card">
+                            <div class="card-body">
+                                <h5><span id="forcastDate2">01/01/2021</span></h5>
+
+                                <p><span id="forcastIcon2"><i class="fas fa-cloud-sun"></i></span></p>
+
+                                <p>Temp: <span id="forcastTemp2">46</span>&deg F</p>
+
+                                <p>Humditiy: <span id="forcastHumidity2">30</span>%</p>
+                            </div>
+                        </li>
+
+                        <li id="forecast3" class="card five-day-card">
+                            <div class="card-body">
+                                <h5><span id="forcastDate1">01/01/2021</span></h5>
+
+                                <p><span id="forcastIcon3"><i class="fas fa-cloud-sun"></i></span></p>
+
+                                <p>Temp: <span id="forcastTemp3">46</span>&deg F</p>
+
+                                <p>Humditiy: <span id="forcastHumidity3">30</span>%</p>
+                            </div>
+                        </li>
+
+                        <li id="forecast4" class="card five-day-card">
+                            <div class="card-body">
+                                <h5><span id="forcastDate4">01/01/2021</span></h5>
+
+                                <p><span id="forcastIcon4"><i class="fas fa-cloud-sun"></i></span></p>
+
+                                <p>Temp: <span id="forcastTemp4">46</span>&deg F</p>
+
+                                <p>Humditiy: <span id="forcastHumidity4">30</span>%</p>
+                            </div>
+                        </li>
+
+                        <li id="forecast5" class="card five-day-card">
+                            <div class="card-body">
+                                <h5><span id="forcastDate5">01/01/2021</span></h5>
+
+                                <p><span id="forcastIcon5"><i class="fas fa-cloud-sun"></i></span></p>
+
+                                <p>Temp: <span id="forcastTemp5">46</span>&deg F</p>
+
+                                <p>Humditiy: <span id="forcastHumidity1">30</span>%</p>
+                            </div>
+                        </li>
+                        
 
                     </ul>
 
