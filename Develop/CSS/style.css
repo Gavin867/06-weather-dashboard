@@ -5,17 +5,13 @@ body {
     line-height: 1.5;
     font-family: 'Open Sans', sans-serif;
     font-size: x-large;
-    width: 100vw;
 }
 
 .navbar {
     margin-bottom: 0;
-    height: 8vh;
-    width: 100%;
 }
 
 main {
-    height: 92vh;
     margin: 0;
 }
 
@@ -29,6 +25,7 @@ h2 {
 }
 
 h3 {
+    font-size: 1.5vw;
     font-weight: bold;
 }
 
@@ -36,19 +33,17 @@ aside {
     margin-left: 0;
     background-color: lightgray;
     padding: 3%;
-    height: 90vh;
 }
 
 
 #main-display {
-    height: 50vh;
     padding: 5%;
     line-height: 2;
     font-size: 20pt;
 }
 
 .five-day-card {
-    border-radius: 5px;
+    border-radius: 5%;
     color: whitesmoke;
     background-color: blue;
     margin: 1%;
