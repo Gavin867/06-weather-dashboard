@@ -24,13 +24,13 @@
     <main class="row">
 
         <div class="col-3">
-            <aside>
+            <aside class="side-card">
 
-                <h3>Search for a City:</h2>
+                <h2>Search for a City:</h2>
 
                 <form class="input-group p-3">
 
-                    <input type="text" class="form-control" placeholder="City name here...">
+                    <input id="searchCity" type="text" class="form-control" placeholder="City name here...">
 
                     <div class="input-group-append">
 
@@ -46,14 +46,18 @@
 
                 <section id="city-list" class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Austin</li>
+
+                        <!-- Static list items can be uncomment for fomatting visibility  -->
+
+                        <!-- <li class="list-group-item">Austin</li>
                         <li class="list-group-item">Chicago</li>
                         <li class="list-group-item">New York</li>
                         <li class="list-group-item">Orlando</li>
                         <li class="list-group-item">San Franciso</li>
                         <li class="list-group-item">Seattle</li>
                         <li class="list-group-item">Denver</li>
-                        <li class="list-group-item">Atlanta</li>
+                        <li class="list-group-item">Atlanta</li> -->
+                    
                     </ul>
                 </section>
 
@@ -65,19 +69,22 @@
             <section id="main-display" class="card mt-3">
                 <div class="card-body">
 
-                    <h2>
-                        <span id="currentCityName">Seattle</span> 
-                        (<span id="currentDay">01/01/2021</span>) 
-                        <span><i class="fas fa-cloud-sun"></i></span>
-                    </h2>
+                    <h3>
+                        <span id="currentCityName">-----------</span> 
+                        (<span id="currentDay">--/--/----</span>) 
+                        <span id="mainIcon">---</span>
+                    </h3>
 
-                    <p>Temperature: <span id="currentCityTemp">46</span>&deg F</p>
+                    <p>Temperature: <span id="currentCityTemp">--</span>&deg F</p>
 
-                    <p>Humditiy: <span id="currenCityHumidity">30</span>%</p>
+                    <p>Humditiy: <span id="currenCityHumidity">---</span> %</p>
 
-                    <p>Wind Speed: <span id="windSpeed">5</span> mph from the <span id="windDirection">NW</span></p>
+                    <p>Wind Speed: <span id="windSpeed">---</span> mph</p> 
+                        
+                        <!-- Ideally would like to include wind direction, but it will take a variable to convert degrees to cardinal directions -->
+                        <!-- mph from the <span id="windDirection">NW</span></p> -->
 
-                    <p>UV Idex: <span id="uvIndex">1.32</span></p>
+                    <p>UV Idex: <span id="uvIndex">----</span></p>
 
                 </div>
             </section>
@@ -85,67 +92,67 @@
             <section id="secondary-display">
                 <div class="card-body">
 
-                    <h3>5-Day Forecast:</h3>
+                    <h4>5-Day Forecast:</h4>
 
                     <ul class="row">
 
                         <li id="forecast1" class="card five-day-card">
                             <div class="card-body">
-                                <h5><span id="forcastDate1">01/01/2021</span></h5>
+                                <h5><span id="forcastDate1">--/--/----</span></h5>
 
-                                <p><span id="forcastIcon1"><i class="fas fa-cloud-sun"></i></span></p>
+                                <p><span id="forcastIcon1">---</span></p>
 
-                                <p>Temp: <span id="forcastTemp1">46</span>&deg F</p>
+                                <p>Temp: <span id="forcastTemp1">---</span>&deg F</p>
 
-                                <p>Humditiy: <span id="forcastHumidity1">30</span>%</p>
+                                <p>Humditiy: <span id="forcastHumidity1">---</span>%</p>
                             </div>
                         </li>
 
                         <li id="forecast2" class="card five-day-card">
                             <div class="card-body">
-                                <h5><span id="forcastDate2">01/01/2021</span></h5>
+                                <h5><span id="forcastDate2">--/--/----</span></h5>
 
-                                <p><span id="forcastIcon2"><i class="fas fa-cloud-sun"></i></span></p>
+                                <p><span id="forcastIcon2">---</span></p>
 
-                                <p>Temp: <span id="forcastTemp2">46</span>&deg F</p>
+                                <p>Temp: <span id="forcastTemp2">---</span>&deg F</p>
 
-                                <p>Humditiy: <span id="forcastHumidity2">30</span>%</p>
+                                <p>Humditiy: <span id="forcastHumidity2">---</span>%</p>
                             </div>
                         </li>
 
                         <li id="forecast3" class="card five-day-card">
                             <div class="card-body">
-                                <h5><span id="forcastDate1">01/01/2021</span></h5>
+                                <h5><span id="forcastDate1">--/--/----</span></h5>
 
-                                <p><span id="forcastIcon3"><i class="fas fa-cloud-sun"></i></span></p>
+                                <p><span id="forcastIcon3">---</span></p>
 
-                                <p>Temp: <span id="forcastTemp3">46</span>&deg F</p>
+                                <p>Temp: <span id="forcastTemp3">---</span>&deg F</p>
 
-                                <p>Humditiy: <span id="forcastHumidity3">30</span>%</p>
+                                <p>Humditiy: <span id="forcastHumidity3">---</span>%</p>
                             </div>
                         </li>
 
                         <li id="forecast4" class="card five-day-card">
                             <div class="card-body">
-                                <h5><span id="forcastDate4">01/01/2021</span></h5>
+                                <h5><span id="forcastDate4">--/--/----</span></h5>
 
-                                <p><span id="forcastIcon4"><i class="fas fa-cloud-sun"></i></span></p>
+                                <p><span id="forcastIcon4">---</span></p>
 
-                                <p>Temp: <span id="forcastTemp4">46</span>&deg F</p>
+                                <p>Temp: <span id="forcastTemp4">---</span>&deg F</p>
 
-                                <p>Humditiy: <span id="forcastHumidity4">30</span>%</p>
+                                <p>Humditiy: <span id="forcastHumidity4">---</span>%</p>
                             </div>
                         </li>
 
                         <li id="forecast5" class="card five-day-card">
                             <div class="card-body">
-                                <h5><span id="forcastDate5">01/01/2021</span></h5>
+                                <h5><span id="forcastDate5">--/--/----</span></h5>
 
-                                <p><span id="forcastIcon5"><i class="fas fa-cloud-sun"></i></span></p>
+                                <p><span id="forcastIcon5">---</span></p>
 
-                                <p>Temp: <span id="forcastTemp5">46</span>&deg F</p>
+                                <p>Temp: <span id="forcastTemp5">---</span>&deg F</p>
 
-                                <p>Humditiy: <span id="forcastHumidity1">30</span>%</p>
+                                <p>Humditiy: <span id="forcastHumidity1">---</span>%</p>
                             </div>
                         </li>
                         
@@ -159,9 +166,7 @@
 
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>

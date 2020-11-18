@@ -4,30 +4,20 @@ body {
     margin: 0;
     line-height: 1.5;
     font-family: 'Open Sans', sans-serif;
-    font-size: x-large;
+    font-size: 20pt;
 }
 
 .navbar {
     margin-bottom: 0;
 }
 
-main {
+/* main {
     margin: 0;
-}
+} */
 
-.list-group-item {
+/* .list-group-item {
     font-size: 1.5vw;
-}
-
-h2 {
-    font-size: xxx-large;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 1.5vw;
-    font-weight: bold;
-}
+} */
 
 aside {
     margin-left: 0;
@@ -37,9 +27,11 @@ aside {
 
 
 #main-display {
-    padding: 5%;
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     line-height: 2;
-    font-size: 20pt;
+    font-size: 24pt;
 }
 
 .five-day-card {
@@ -47,4 +39,19 @@ aside {
     color: whitesmoke;
     background-color: blue;
     margin: 1%;
+}
+
+h2 {
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 40pt;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 30pt;
+    font-weight: bold;
 }
