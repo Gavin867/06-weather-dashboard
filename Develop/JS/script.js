@@ -1,4 +1,6 @@
-var apiKey = "c91773251f63db01df3cd6ca70045ea5"
+var apiKey = "c91773251f63db01df3cd6ca70045ea5";
+
+var todaysDate = moment().format("MM/DD/YYYY");
 
 function retrieveWeather() {
     console.log("Button Click")
@@ -19,32 +21,32 @@ function retrieveWeather() {
 
             var results = response;
 
+            var farenheitTemp = (results.main.temp - 273.15) * 1.80 + 32;
+
             console.log(results);
 
-            $("#currentCityName").text(results.name)
-
-            var todaysDate = new Date(results.dt).toLocaleDateString("en-US")
-            console.log(todaysDate);
+            $("#currentCityName").text(results.name);
 
             $("#currentDay").text(todaysDate);
 
             // variable to grab icon data
             // var mainIconDisplay = 
 
-            $("#mainIcon").text(mainIconDisplay)
+            // $("#mainIcon").text(mainIconDisplay)
 
-            $("#currentCityTemp").text(results.name)
+            $("#currentCityTemp").text(farenheitTemp);
 
-            $("#windSpeed").text(results.name)
+            $("#currenCityHumidity").text(results.main.humidity);
 
-            $("#uvIndex").text(results.name)
+            $("#windSpeed").text(results.wind.speed);
+
+            // $("#uvIndex").text(results.name)
         })
 }
 
 // Search city onclick of search button
 $("#searchBtn").on("click", function () {
     retrieveWeather()
-
 
 });
 

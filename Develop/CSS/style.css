@@ -11,14 +11,6 @@ body {
     margin-bottom: 0;
 }
 
-/* main {
-    margin: 0;
-} */
-
-/* .list-group-item {
-    font-size: 1.5vw;
-} */
-
 aside {
     margin-left: 0;
     background-color: lightgray;
@@ -39,6 +31,11 @@ aside {
     color: whitesmoke;
     background-color: blue;
     margin: 1%;
+}
+
+h1 {
+    font-size: 30pt;
+    font-weight: bold;
 }
 
 h2 {
