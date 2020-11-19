@@ -15,9 +15,7 @@ function retrieveWeather(city) {
         method: "GET"
     })
 
-        .then(function (response) {
-
-            var results = response;
+        .then(function (results) {
 
             var farenheitTemp = (results.main.temp - 273.15) * 1.80 + 32;
 
@@ -36,7 +34,17 @@ function retrieveWeather(city) {
             $("#windSpeed").text(results.wind.speed);
 
             // $("#uvIndex").text(results.name)
+
+
+
+            retrieveUVfiveday(results.coord.lat, results.coord.lon);
         })
+}
+
+function retrieveUVfiveday(lattitude, longitude) {
+
+
+
 }
 
 // Search city onclick of search button
@@ -44,21 +52,20 @@ $("#searchBtn").on("click", function () {
 
     var citySearched = $("#searchCity").val();
 
-    var createBtn = $(`<button class="list-group-item">${citySearched}</button>`);
+    var createBtn = $(`<button class="list-group-item" data-city="${citySearched}">${citySearched}</button>`);
 
     $("#btnContainer").prepend(createBtn);
 
     retrieveWeather(citySearched);
+
 });
 
-// $("#cities-list").on("click", "button", function () {
+$("#cities-list").on("click", "button", function () {
 
-//    $(this)
+    var citySearched = $(this).data("city");
 
-//     var citySearched = $("#searchCity").val();
-
-//     retrieveWeather(citySearched);
-// });
+    retrieveWeather(citySearched);
+});
 
 // City name is prepended to <ul>
 
