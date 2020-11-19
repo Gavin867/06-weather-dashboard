@@ -2,10 +2,8 @@ var apiKey = "c91773251f63db01df3cd6ca70045ea5";
 
 var todaysDate = moment().format("MM/DD/YYYY");
 
-function retrieveWeather() {
+function retrieveWeather(citySearched) {
     console.log("Button Click")
-
-    var citySearched = $("#searchCity").val();
 
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + citySearched + "&appid=" + apiKey;
 
@@ -29,10 +27,7 @@ function retrieveWeather() {
 
             $("#currentDay").text(todaysDate);
 
-            // variable to grab icon data
-            // var mainIconDisplay = 
-
-            // $("#mainIcon").text(mainIconDisplay)
+            $("#mainIcon").attr("src", "http://openweathermap.org/img/wn/" + (results.weather[0].icon) + "@2x.png");
 
             $("#currentCityTemp").text(farenheitTemp);
 
@@ -46,8 +41,10 @@ function retrieveWeather() {
 
 // Search city onclick of search button
 $("#searchBtn").on("click", function () {
-    retrieveWeather()
 
+    var citySearched = $("#searchCity").val();
+
+    retrieveWeather(citySearched);
 });
 
 
