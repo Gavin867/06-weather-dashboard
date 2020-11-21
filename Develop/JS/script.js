@@ -41,11 +41,11 @@ function retrieveWeather(city) {
         })
 }
 
-function retrieveUVfiveday(lattitude, longitude) {
+// function retrieveUVfiveday(lattitude, longitude) {
 
 
 
-}
+// }
 
 // Search city onclick of search button
 $("#searchBtn").on("click", function () {
