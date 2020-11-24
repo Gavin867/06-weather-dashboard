@@ -14,7 +14,7 @@ function retrieveWeather(city) {
     
     console.log("Button Click");
 
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
 
     console.log(queryURL);
 
