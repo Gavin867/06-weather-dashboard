@@ -1,8 +1,5 @@
 var apiKey = "c91773251f63db01df3cd6ca70045ea5";
 
-// var todaysDate = moment().format("MM/DD/YYYY");
-
-
 function getDate(UNIX_timestamp) {
     var a = new Date(UNIX_timestamp * 1000);
     var months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
@@ -13,9 +10,8 @@ function getDate(UNIX_timestamp) {
     return time;
 }
 
-
 function retrieveWeather(city) {
-    console.log("Button Click")
+    // console.log("Button Click")
 
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
 
@@ -80,9 +76,6 @@ function retrieveUVfiveday(lattitude, longitude) {
                 $("#forcastHumidity" + i).text(oneCallResults.daily[i].humidity);
             }
         })
-
-
-
 }
 
 // Search city onclick of search button
