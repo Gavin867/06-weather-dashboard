@@ -36,7 +36,7 @@ function retrieveWeather(city) {
 
             $("#currentDay").text("("+ currentDate + ")");
 
-            $("#mainIcon").attr("src", "http://openweathermap.org/img/wn/" + (results.weather[0].icon) + "@2x.png");
+            $("#mainIcon").attr("src", "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/" + (results.weather[0].icon) + "@2x.png");
 
             $("#currentCityTemp").text("Temperature: " + results.main.temp + "° F");
 
@@ -70,7 +70,7 @@ function retrieveUVfiveday(lattitude, longitude) {
 
                 $("#forcastDate" + i).text(getDate(oneCallResults.daily[i].dt));
 
-                $("#forcastIcon" + i).attr("src", "http://openweathermap.org/img/wn/" + (oneCallResults.daily[i].weather[0].icon) + "@2x.png");
+                $("#forcastIcon" + i).attr("src", "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/" + (oneCallResults.daily[i].weather[0].icon) + "@2x.png");
 
                 $("#forcastTemp" + i).text("Temp: " + oneCallResults.daily[i].temp.day + "° F");
 
