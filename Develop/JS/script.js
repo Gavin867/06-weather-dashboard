@@ -16,8 +16,6 @@ function retrieveWeather(city) {
 
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
 
-    // console.log(queryURL);
-
     // Performing our AJAX GET request
     $.ajax({
         url: queryURL,
@@ -29,8 +27,6 @@ function retrieveWeather(city) {
             console.log(results);
 
             var currentDate = getDate(results.dt);
-
-            console.log(currentDate);
 
             $("#currentCityName").text(results.name);
 
@@ -51,8 +47,6 @@ function retrieveWeather(city) {
 function retrieveUVfiveday(lattitude, longitude) {
 
     var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lattitude + "&lon=" + longitude + "&exclude=minutely,hourly,alerts&appid=" + apiKey + "&units=imperial";
-
-    // console.log(queryURL);
 
     // Performing our AJAX GET request
     $.ajax({
