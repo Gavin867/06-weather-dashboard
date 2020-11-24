@@ -78,6 +78,15 @@ function retrieveUVfiveday(lattitude, longitude) {
                 $("#forcastTemp1").text(oneCallResults.daily[i].temp.day);
 
                 $("#forcastHumidity1").text(oneCallResults.daily[i].humidity);
+
+                $("#forcastDate2").text(getDate(oneCallResults.daily[i].dt));
+
+                $("#forcastIcon2").attr("src", "http://openweathermap.org/img/wn/" + (oneCallResults.daily[i].weather[1].icon) + "@2x.png");
+
+                $("#forcastTemp2").text(oneCallResults.daily[i].temp.day);
+
+                $("#forcastHumidity2").text(oneCallResults.daily[i].humidity);
+
             }
         })
 
