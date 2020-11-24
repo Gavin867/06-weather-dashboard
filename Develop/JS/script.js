@@ -1,5 +1,7 @@
 var apiKey = "c91773251f63db01df3cd6ca70045ea5";
 
+var savedSearch = JSON.parse(localStorage.getItem("Previous Searches"))||[];
+
 function getDate(UNIX_timestamp) {
     var a = new Date(UNIX_timestamp * 1000);
     var months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
@@ -81,6 +83,10 @@ $("#searchBtn").on("click", function () {
     var createBtn = $(`<button class="list-group-item" data-city="${citySearched}">${citySearched}</button>`);
 
     $("#btnContainer").prepend(createBtn);
+
+    savedSearch.push(citySearched);
+
+    localStorage.setItem("Previous Searches", JSON.stringify(savedSearch));
 
     retrieveWeather(citySearched);
 
