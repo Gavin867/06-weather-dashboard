@@ -12,7 +12,7 @@ function getDate(UNIX_timestamp) {
 
 function retrieveWeather(city) {
     
-    console.log("Button Click")
+    console.log("Button Click");
 
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
 
