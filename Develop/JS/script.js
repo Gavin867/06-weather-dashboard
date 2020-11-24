@@ -1,6 +1,6 @@
 var apiKey = "c91773251f63db01df3cd6ca70045ea5";
 
-var todaysDate = moment().format("MM/DD/YYYY");
+// var todaysDate = moment().format("MM/DD/YYYY");
 
 
 function getDate(UNIX_timestamp) {
@@ -71,22 +71,13 @@ function retrieveUVfiveday(lattitude, longitude) {
 
             for (i = 0; i < 5; i++) {
 
-                $("#forcastDate1").text(getDate(oneCallResults.daily[i].dt));
+                $("#forcastDate" + i).text(getDate(oneCallResults.daily[i].dt));
 
-                $("#forcastIcon1").attr("src", "http://openweathermap.org/img/wn/" + (oneCallResults.daily[i].weather[0].icon) + "@2x.png");
+                $("#forcastIcon" + i).attr("src", "http://openweathermap.org/img/wn/" + (oneCallResults.daily[i].weather[0].icon) + "@2x.png");
 
-                $("#forcastTemp1").text(oneCallResults.daily[i].temp.day);
+                $("#forcastTemp" + i).text(oneCallResults.daily[i].temp.day);
 
-                $("#forcastHumidity1").text(oneCallResults.daily[i].humidity);
-
-                $("#forcastDate2").text(getDate(oneCallResults.daily[i].dt));
-
-                $("#forcastIcon2").attr("src", "http://openweathermap.org/img/wn/" + (oneCallResults.daily[i].weather[1].icon) + "@2x.png");
-
-                $("#forcastTemp2").text(oneCallResults.daily[i].temp.day);
-
-                $("#forcastHumidity2").text(oneCallResults.daily[i].humidity);
-
+                $("#forcastHumidity" + i).text(oneCallResults.daily[i].humidity);
             }
         })
 
@@ -113,12 +104,4 @@ $("#cities-list").on("click", "button", function () {
 
     retrieveWeather(citySearched);
 });
-
-// City name is prepended to <ul>
-
-// ajax call retrieves current weather data and the 5 day forceast
-
-// render current weather data into the mainDisplay
-
-// render 5 day forcast into each card 
 
