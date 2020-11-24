@@ -52,7 +52,7 @@ function retrieveUVfiveday(lattitude, longitude) {
 
     var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lattitude + "&lon=" + longitude + "&exclude=minutely,hourly,alerts&appid=" + apiKey + "&units=imperial";
 
-    console.log(queryURL);
+    // console.log(queryURL);
 
     // Performing our AJAX GET request
     $.ajax({
