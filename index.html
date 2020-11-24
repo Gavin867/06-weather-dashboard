@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,156 +13,121 @@
 </head>
 
 <body>
-
     <header class="navbar justify-content-center navbar-dark bg-dark text-light h1">
-
         <h1>Weather Dashboard</h1>
-
     </header>
 
     <main class="row">
-
         <div class="col-3">
             <aside class="side-card">
-
                 <h2>Search for a City:</h2>
 
                 <form class="input-group p-3">
-
                     <input id="searchCity" type="text" class="form-control" placeholder="City name here...">
 
                     <div class="input-group-append">
-
                         <button id="searchBtn" class="btn btn-secondary" type="button">
 
                             <i class="fa fa-search"></i>
-
                         </button>
-
                     </div>
-
                 </form>
 
                 <section id="cities-list" class="card">
                     <div id="btnContainer" class="list-group list-group-flush">
-
-                        <!-- Static list items can be uncomment for fomatting visibility  -->
-
-                        <!-- <li class="list-group-item">Austin</li>
-                        <li class="list-group-item">Chicago</li>
-                        <li class="list-group-item">New York</li>
-                        <li class="list-group-item">Orlando</li>
-                        <li class="list-group-item">San Franciso</li>
-                        <li class="list-group-item">Seattle</li>
-                        <li class="list-group-item">Denver</li>
-                        <li class="list-group-item">Atlanta</li> -->
-
+                        <!-- Appended city buttons go here... -->
                     </div>
                 </section>
-
             </aside>
         </div>
 
         <div class="col-9">
-
             <section id="main-display" class="card mt-3">
                 <div class="card-body">
-
                     <h3>
-                        <span id="currentCityName">-----------</span>
-                        (<span id="currentDay">--/--/----</span>)
+                        <span id="currentCityName">Your City</span>
+                        <span id="currentDay">(Today's Date)</span>
                         <img id="mainIcon">
                     </h3>
 
-                    <p>Temperature: <span id="currentCityTemp">--</span>&deg F</p>
+                    <p id="currentCityTemp">Temperature: 00&deg F</p>
 
-                    <p>Humditiy: <span id="currenCityHumidity">---</span>%</p>
+                    <p id="currenCityHumidity">Humidity: 00%</p>
 
-                    <p>Wind Speed: <span id="windSpeed">---</span> mph</p>
+                    <p id="windSpeed">Wind Speed: 00 mph</p>
 
-                    <!-- Ideally would like to include wind direction, but it will take a variable to convert degrees to cardinal directions -->
-                    <!-- from the <span id="windDirection">--</span></p> -->
-
-                    <p>UV Idex: <span id="uvIndex">----</span></p>
-
+                    <p id="uvIndex">UV Index: 00.00</p>
                 </div>
             </section>
 
             <section id="secondary-display">
                 <div class="card-body">
-
                     <h4>5-Day Forecast:</h4>
 
                     <ul class="row">
-
                         <li id="forecast0" class="card five-day-card">
                             <div class="card-body">
-                                <h5><span id="forcastDate0">--/--/----</span></h5>
+                                <h5 id="forcastDate0">D + 1</h5>
 
                                 <img id="forcastIcon0"/>
 
-                                <p>Temp: <span id="forcastTemp0">---</span>&deg F</p>
+                                <p id="forcastTemp0">Temp: 00&deg F</p>
 
-                                <p>Humditiy: <span id="forcastHumidity0">---</span>%</p>
+                                <p id="forcastHumidity0">Humidity: 00%</p>
                             </div>
                         </li>
 
                         <li id="forecast" class="card five-day-card">
                             <div class="card-body">
-                                <h5><span id="forcastDate1">--/--/----</span></h5>
+                                <h5 id="forcastDate1">D + 2</h5>
 
                                 <img id="forcastIcon1"/>
 
-                                <p>Temp: <span id="forcastTemp1">---</span>&deg F</p>
+                                <p id="forcastTemp1">Temp: 00&deg F</p>
 
-                                <p>Humditiy: <span id="forcastHumidity1">---</span>%</p>
+                                <p id="forcastHumidity1">Humidity: 00%</p>
                             </div>
                         </li>
 
                         <li id="forecast3" class="card five-day-card">
                             <div class="card-body">
-                                <h5><span id="forcastDate2">--/--/----</span></h5>
+                                <h5 id="forcastDate2">D + 3</h5>
 
                                 <img id="forcastIcon2"/>
 
-                                <p>Temp: <span id="forcastTemp2">---</span>&deg F</p>
+                                <p id="forcastTemp2">Temp: 00&deg F</p>
 
-                                <p>Humditiy: <span id="forcastHumidity2">---</span>%</p>
+                                <p id="forcastHumidity2">Humidity: 00%</p>
                             </div>
                         </li>
 
                         <li id="forecast4" class="card five-day-card">
                             <div class="card-body">
-                                <h5><span id="forcastDate3">--/--/----</span></h5>
+                                <h5 id="forcastDate3">D + 4</h5>
 
                                 <img id="forcastIcon3"/>
 
-                                <p>Temp: <span id="forcastTemp3">---</span>&deg F</p>
+                                <p id="forcastTemp3">Temp: 00&deg F</p>
 
-                                <p>Humditiy: <span id="forcastHumidity3">---</span>%</p>
+                                <p id="forcastHumidity3">Humidity: 00%</p>
                             </div>
                         </li>
 
                         <li id="forecast5" class="card five-day-card">
                             <div class="card-body">
-                                <h5><span id="forcastDate4">--/--/----</span></h5>
+                                <h5 id="forcastDate4">D + 5</h5>
 
                                 <img id="forcastIcon4"/>
 
-                                <p>Temp: <span id="forcastTemp4">---</span>&deg F</p>
+                                <p id="forcastTemp4">Temp: 00&deg F</p>
 
-                                <p>Humditiy: <span id="forcastHumidity4">---</span>%</p>
+                                <p id="forcastHumidity4">Humidity: 00%</p>
                             </div>
                         </li>
-
-
                     </ul>
-
                 </div>
             </section>
-
         </div>
-
     </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
@@ -178,5 +142,4 @@
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
         crossorigin="anonymous"></script>
     <script src="./Develop/JS/script.js"></script>
-
 </html>

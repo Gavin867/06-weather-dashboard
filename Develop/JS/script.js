@@ -11,7 +11,8 @@ function getDate(UNIX_timestamp) {
 }
 
 function retrieveWeather(city) {
-    // console.log("Button Click")
+    
+    console.log("Button Click")
 
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
 
@@ -33,15 +34,15 @@ function retrieveWeather(city) {
 
             $("#currentCityName").text(results.name);
 
-            $("#currentDay").text(currentDate);
+            $("#currentDay").text("("+ currentDate + ")");
 
             $("#mainIcon").attr("src", "http://openweathermap.org/img/wn/" + (results.weather[0].icon) + "@2x.png");
 
-            $("#currentCityTemp").text(results.main.temp);
+            $("#currentCityTemp").text("Temperature: " + results.main.temp + "° F");
 
-            $("#currenCityHumidity").text(results.main.humidity);
+            $("#currenCityHumidity").text("Humidity: " + results.main.humidity + "%");
 
-            $("#windSpeed").text(results.wind.speed);
+            $("#windSpeed").text("Wind Speed: " + results.wind.speed + " mph");
 
             retrieveUVfiveday(results.coord.lat, results.coord.lon);
         })
@@ -63,7 +64,7 @@ function retrieveUVfiveday(lattitude, longitude) {
 
             console.log(oneCallResults);
 
-            $("#uvIndex").text(oneCallResults.current.uvi);
+            $("#uvIndex").text("UV Idex: " + oneCallResults.current.uvi);
 
             for (i = 0; i < 5; i++) {
 
@@ -71,9 +72,9 @@ function retrieveUVfiveday(lattitude, longitude) {
 
                 $("#forcastIcon" + i).attr("src", "http://openweathermap.org/img/wn/" + (oneCallResults.daily[i].weather[0].icon) + "@2x.png");
 
-                $("#forcastTemp" + i).text(oneCallResults.daily[i].temp.day);
+                $("#forcastTemp" + i).text("Temp: " + oneCallResults.daily[i].temp.day + "° F");
 
-                $("#forcastHumidity" + i).text(oneCallResults.daily[i].humidity);
+                $("#forcastHumidity" + i).text("Humidity: " + oneCallResults.daily[i].humidity + "%");
             }
         })
 }
