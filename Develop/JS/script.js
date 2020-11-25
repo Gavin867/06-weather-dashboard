@@ -71,6 +71,8 @@ function retrieveUVfiveday(lattitude, longitude) {
 
             console.log(oneCallResults);
 
+            $("#uvIndex").removeClass();
+
             $("#uvIndex").text(oneCallResults.current.uvi);
 
             if (oneCallResults.current.uvi < 3) {
@@ -133,8 +135,6 @@ $("#searchBtn").on("click", function () {
 $("#cities-list").on("click", "button", function () {
 
     var citySearched = $(this).data("city");
-
-    $("#uvIndex").removeClass();
 
     retrieveWeather(citySearched);
 });
