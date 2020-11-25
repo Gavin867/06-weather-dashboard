@@ -1,6 +1,6 @@
 var apiKey = "c91773251f63db01df3cd6ca70045ea5";
 
-var savedSearch = JSON.parse(localStorage.getItem("Previous Searches"))||[];
+var savedSearch = JSON.parse(localStorage.getItem("Previous Searches")) || [];
 
 
 for (i = 0; i < savedSearch.length; i++) {
@@ -24,7 +24,7 @@ function getDate(UNIX_timestamp) {
 
 
 function retrieveWeather(city) {
-    
+
     console.log("Button Click");
 
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
@@ -43,7 +43,7 @@ function retrieveWeather(city) {
 
             $("#currentCityName").text(results.name);
 
-            $("#currentDay").text("("+ currentDate + ")");
+            $("#currentDay").text("(" + currentDate + ")");
 
             $("#mainIcon").attr("src", "https://openweathermap.org/img/wn/" + (results.weather[0].icon) + "@2x.png");
 
@@ -72,7 +72,42 @@ function retrieveUVfiveday(lattitude, longitude) {
 
             console.log(oneCallResults);
 
-            $("#uvIndex").text("UV Idex: " + oneCallResults.current.uvi);
+            $("#uvIndex").text(oneCallResults.current.uvi);
+
+
+            if (oneCallResults.current.uvi < 3) {
+
+                $("#uvIndex").addClass("uv-low");
+
+            } 
+            
+            else if ((oneCallResults.current.uvi >= 3) && (oneCallResults.current.uvi < 6)) {
+                
+                $("#uvIndex").addClass("uv-moderate");
+            }
+
+            else if ((oneCallResults.current.uvi >= 6) && (oneCallResults.current.uvi < 8)) {
+                
+                $("#uvIndex").addClass("uv-high");
+            }
+
+            else if ((oneCallResults.current.uvi >= 8) && (oneCallResults.current.uvi < 11)) {
+                
+                $("#uvIndex").addClass("uv-very-high");
+            }
+
+            else if (oneCallResults.current.uvi >= 11) {
+                
+                $("#uvIndex").addClass("uv-extreme");
+            }
+
+
+            // } else if (uvI > 3 && uvI <= 7) {
+            //     $(".data4").addClass("bg-warning text-white p-1 rounded");
+            // } else if (uvI > 7) {
+            //     $(".data4").addClass("bg-danger text-white p-1 rounded");
+            // }
+
 
             for (i = 0; i < 5; i++) {
 

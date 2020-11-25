@@ -52,3 +52,23 @@ h4 {
     font-size: 30pt;
     font-weight: bold;
 }
+
+.uv-low {
+    background-color: rgb(181, 240, 181);
+}
+
+.uv-moderate {
+    background-color: rgb(233, 233, 119);
+}
+
+.uv-high {
+    background-color: rgb(240, 194, 109);
+}
+
+.uv-very-high {
+    background-color: rgb(241, 94, 94);
+}
+
+.uv-extreme {
+    background-color: rgb(236, 111, 236);
+}
