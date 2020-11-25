@@ -140,11 +140,10 @@ $("#cities-list").on("click", "button", function () {
 });
 
 
-// $("#clearBtn").on("click", "button", function () {
+$("#clearBtn").on("click", function () {
 
-//    // Clear the local storage
-//    window.localStorage.clear();
+    localStorage.removeItem("Previous Searches");
 
-//    // Remove the <ul> element from html
-// //    ulElement.remove();
-// });
+    $(".list-group-item").remove();
+});
+
