@@ -8,7 +8,6 @@ for (i = 0; i < savedSearch.length; i++) {
     var createBtn = $(`<button class="list-group-item" data-city="${savedSearch[i]}">${savedSearch[i]}</button>`);
 
     $("#btnContainer").prepend(createBtn);
-
 }
 
 
@@ -77,37 +76,29 @@ function retrieveUVfiveday(lattitude, longitude) {
 
             if (oneCallResults.current.uvi < 3) {
 
-                $("#uvIndex").addClass("uv-low");
+                $("#uvIndex").addClass("uv-low text-white p-1 rounded");
 
             } 
             
-            else if ((oneCallResults.current.uvi >= 3) && (oneCallResults.current.uvi < 6)) {
+            else if (oneCallResults.current.uvi >= 3 && oneCallResults.current.uvi < 6) {
                 
-                $("#uvIndex").addClass("uv-moderate");
+                $("#uvIndex").addClass("uv-moderate text-white p-1 rounded");
             }
 
-            else if ((oneCallResults.current.uvi >= 6) && (oneCallResults.current.uvi < 8)) {
+            else if (oneCallResults.current.uvi >= 6 && oneCallResults.current.uvi < 8) {
                 
-                $("#uvIndex").addClass("uv-high");
+                $("#uvIndex").addClass("uv-high text-white p-1 rounded");
             }
 
-            else if ((oneCallResults.current.uvi >= 8) && (oneCallResults.current.uvi < 11)) {
+            else if (oneCallResults.current.uvi >= 8 && oneCallResults.current.uvi < 11) {
                 
-                $("#uvIndex").addClass("uv-very-high");
+                $("#uvIndex").addClass("uv-very-high text-white p-1 rounded");
             }
 
             else if (oneCallResults.current.uvi >= 11) {
                 
-                $("#uvIndex").addClass("uv-extreme");
+                $("#uvIndex").addClass("uv-extreme text-white p-1 rounded");
             }
-
-
-            // } else if (uvI > 3 && uvI <= 7) {
-            //     $(".data4").addClass("bg-warning text-white p-1 rounded");
-            // } else if (uvI > 7) {
-            //     $(".data4").addClass("bg-danger text-white p-1 rounded");
-            // }
-
 
             for (i = 0; i < 5; i++) {
 
@@ -137,7 +128,6 @@ $("#searchBtn").on("click", function () {
     localStorage.setItem("Previous Searches", JSON.stringify(savedSearch));
 
     retrieveWeather(citySearched);
-
 });
 
 
@@ -148,3 +138,12 @@ $("#cities-list").on("click", "button", function () {
     retrieveWeather(citySearched);
 });
 
+
+// $("#clearBtn").on("click", "button", function () {
+
+//    // Clear the local storage
+//    window.localStorage.clear();
+
+//    // Remove the <ul> element from html
+// //    ulElement.remove();
+// });
