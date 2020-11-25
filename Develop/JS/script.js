@@ -73,7 +73,6 @@ function retrieveUVfiveday(lattitude, longitude) {
 
             $("#uvIndex").text(oneCallResults.current.uvi);
 
-
             if (oneCallResults.current.uvi < 3) {
 
                 $("#uvIndex").addClass("uv-low text-white p-1 rounded");
@@ -82,7 +81,7 @@ function retrieveUVfiveday(lattitude, longitude) {
             
             else if (oneCallResults.current.uvi >= 3 && oneCallResults.current.uvi < 6) {
                 
-                $("#uvIndex").addClass("uv-moderate text-white p-1 rounded");
+                $("#uvIndex").addClass("uv-moderate text-black p-1 rounded");
             }
 
             else if (oneCallResults.current.uvi >= 6 && oneCallResults.current.uvi < 8) {
@@ -134,6 +133,8 @@ $("#searchBtn").on("click", function () {
 $("#cities-list").on("click", "button", function () {
 
     var citySearched = $(this).data("city");
+
+    $("#uvIndex").removeClass();
 
     retrieveWeather(citySearched);
 });
