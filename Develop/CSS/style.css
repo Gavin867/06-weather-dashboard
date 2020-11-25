@@ -16,11 +16,12 @@ body {
 
 .navbar {
     margin-bottom: 0;
+    background-color: rgb(128, 128, 128, .6);
 }
 
 aside {
     margin-left: 0;
-    background-color: lightgray;
+    background-color: rgb(128, 128, 128, .75);
     padding: 3%;
 }
 
@@ -32,12 +33,13 @@ aside {
     line-height: 2;
     font-size: 22pt;
     width: 900px;
+    background-color: rgb(245, 245, 245, .6);
 }
 
 .five-day-card {
     border-radius: 5%;
     color: whitesmoke;
-    background-color: blue;
+    background-color: rgba(87, 194, 230, 0.6);
     margin: 1%;
 }
 
@@ -49,6 +51,7 @@ aside {
 h2 {
     font-size: 20pt;
     font-weight: bold;
+    color: whitesmoke;
 }
 
 h3 {
