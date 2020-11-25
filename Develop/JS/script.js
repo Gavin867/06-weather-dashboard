@@ -103,13 +103,13 @@ function retrieveUVfiveday(lattitude, longitude) {
 
             for (i = 0; i < 5; i++) {
 
-                $("#forcastDate" + i).text(getDate(oneCallResults.daily[i].dt));
+                $("#forecastDate" + i).text(getDate(oneCallResults.daily[i].dt));
 
-                $("#forcastIcon" + i).attr("src", "https://openweathermap.org/img/wn/" + (oneCallResults.daily[i].weather[0].icon) + "@2x.png");
+                $("#forecastIcon" + i).attr("src", "https://openweathermap.org/img/wn/" + (oneCallResults.daily[i].weather[0].icon) + "@2x.png");
 
-                $("#forcastTemp" + i).text("Temp: " + oneCallResults.daily[i].temp.day + "° F");
+                $("#forecastTemp" + i).text("Temp: " + oneCallResults.daily[i].temp.day + "° F");
 
-                $("#forcastHumidity" + i).text("Humidity: " + oneCallResults.daily[i].humidity + "%");
+                $("#forecastHumidity" + i).text("Humidity: " + oneCallResults.daily[i].humidity + "%");
             }
         })
 }
