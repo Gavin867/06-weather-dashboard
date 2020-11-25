@@ -101,7 +101,7 @@ function retrieveUVfiveday(lattitude, longitude) {
                 $("#uvIndex").addClass("uv-extreme text-white p-1 rounded");
             }
 
-            for (i = 0; i < 5; i++) {
+            for (i = 1; i < 6; i++) {
 
                 $("#forecastDate" + i).text(getDate(oneCallResults.daily[i].dt));
 
