@@ -2,7 +2,7 @@ var apiKey = "c91773251f63db01df3cd6ca70045ea5";
 
 var savedSearch = JSON.parse(localStorage.getItem("Previous Searches")) || [];
 
-// https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/
+// titleCase function found on https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/
 function titleCase(str) {
 
     str = str.toLowerCase().split(' ');
@@ -22,7 +22,7 @@ for (i = 0; i < savedSearch.length; i++) {
     $("#btnContainer").prepend(createBtn);
 }
 
-
+// getDate function found on https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
 function getDate(UNIX_timestamp) {
     var a = new Date(UNIX_timestamp * 1000);
     var months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
