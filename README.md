@@ -29,3 +29,7 @@
 
 * [GitHub Repo](https://github.com/Gavin867/weather-dashboard)
 * [Published Site](https://gavin867.github.io/weather-dashboard/)
+
+## Project Demo
+
+![Demo](https://github.com/Gavin867/weather-dashboard/blob/main/Assets/wd-demo-1200px.gif?raw=true)
