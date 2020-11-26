@@ -16,7 +16,7 @@ function titleCase(str) {
     return str.join(' ');
 }
 
-// 
+// Renders the list group item buttons when the page loads based on city values contained in local storage
 for (i = 0; i < savedSearch.length; i++) {
 
     var createBtn = $(`<button class="list-group-item" data-city="${savedSearch[i]}">${savedSearch[i]}</button>`);
@@ -170,4 +170,3 @@ $("#clearBtn").on("click", function () {
 
     $("#display-weather").addClass("d-none");
 });
-
