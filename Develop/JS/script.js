@@ -1,8 +1,9 @@
 var apiKey = "c91773251f63db01df3cd6ca70045ea5";
 
-var savedSearch = JSON.parse(localStorage.getItem("Previous Searches")) || [];
+// Locage storage
+var savedSearch = JSON.parse(localStorage.getItem("PreviousForecastSearches")) || [];
 
-// titleCase function found on https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/
+// Capitalizes search term, solution found on https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/
 function titleCase(str) {
 
     str = str.toLowerCase().split(' ');
@@ -15,6 +16,7 @@ function titleCase(str) {
     return str.join(' ');
 }
 
+// 
 for (i = 0; i < savedSearch.length; i++) {
 
     var createBtn = $(`<button class="list-group-item" data-city="${savedSearch[i]}">${savedSearch[i]}</button>`);
@@ -22,7 +24,7 @@ for (i = 0; i < savedSearch.length; i++) {
     $("#btnContainer").prepend(createBtn);
 }
 
-// getDate function found on https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
+// Converts unix timestamp to date, solution found on https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
 function getDate(UNIX_timestamp) {
     var a = new Date(UNIX_timestamp * 1000);
     var months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
@@ -33,7 +35,7 @@ function getDate(UNIX_timestamp) {
     return time;
 }
 
-
+// Calls the API for current weather date, icon, temp, humidity, and windspeed
 function retrieveWeather(city) {
 
     console.log("Button Click");
@@ -68,7 +70,7 @@ function retrieveWeather(city) {
         })
 }
 
-
+// retrieveWeather passes the city coordinate data into retrieveUVfiveday which retrieves/color codes uv index, and then retrieves date, icon, temp and humidity for the five day forecast
 function retrieveUVfiveday(lattitude, longitude) {
 
     var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lattitude + "&lon=" + longitude + "&exclude=minutely,hourly,alerts&appid=" + apiKey + "&units=imperial";
@@ -124,12 +126,13 @@ function retrieveUVfiveday(lattitude, longitude) {
                 $("#forecastHumidity" + i).text("Humidity: " + oneCallResults.daily[i].humidity + "%");
             }
 
+            // Removes the "hide" class from the weather display section of the page
             $("#display-weather").removeClass("d-none");
         })
 }
 
 
-// Search city onclick of search button
+// Search city onclick of search button, converts form value to title case, verifies if data already exists in storage and creates a button if it is not
 $("#searchBtn").on("click", function () {
 
     var citySearched = titleCase($("#searchCity").val());
@@ -142,13 +145,13 @@ $("#searchBtn").on("click", function () {
 
         savedSearch.push(citySearched);
 
-        localStorage.setItem("Previous Searches", JSON.stringify(savedSearch));
+        localStorage.setItem("PreviousForecastSearches", JSON.stringify(savedSearch));
     }
 
     retrieveWeather(citySearched);
 });
 
-
+// Adds functionality to the buttons generated in the list group, uses the data-city value passed into each button to get value
 $("#cities-list").on("click", "button", function () {
 
     var citySearched = $(this).data("city");
@@ -156,10 +159,10 @@ $("#cities-list").on("click", "button", function () {
     retrieveWeather(citySearched);
 });
 
-
+// Allows the clearBtn to remove all app data stored in PreviousForecastSearches, returns its value to an empty array, removes the list group buttons and then rehides the weather display section of the page
 $("#clearBtn").on("click", function () {
 
-    localStorage.removeItem("Previous Searches");
+    localStorage.removeItem("PreviousForecastSearches");
 
     savedSearch = []
     
