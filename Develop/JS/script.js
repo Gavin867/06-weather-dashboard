@@ -2,6 +2,18 @@ var apiKey = "c91773251f63db01df3cd6ca70045ea5";
 
 var savedSearch = JSON.parse(localStorage.getItem("Previous Searches")) || [];
 
+// https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/
+function titleCase(str) {
+
+    str = str.toLowerCase().split(' ');
+
+    for (var i = 0; i < str.length; i++) {
+
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+
+    return str.join(' ');
+}
 
 for (i = 0; i < savedSearch.length; i++) {
 
@@ -79,25 +91,25 @@ function retrieveUVfiveday(lattitude, longitude) {
 
                 $("#uvIndex").addClass("uv-low text-white p-1 rounded");
 
-            } 
-            
+            }
+
             else if (oneCallResults.current.uvi >= 3 && oneCallResults.current.uvi < 6) {
-                
+
                 $("#uvIndex").addClass("uv-moderate text-black p-1 rounded");
             }
 
             else if (oneCallResults.current.uvi >= 6 && oneCallResults.current.uvi < 8) {
-                
+
                 $("#uvIndex").addClass("uv-high text-white p-1 rounded");
             }
 
             else if (oneCallResults.current.uvi >= 8 && oneCallResults.current.uvi < 11) {
-                
+
                 $("#uvIndex").addClass("uv-very-high text-white p-1 rounded");
             }
 
             else if (oneCallResults.current.uvi >= 11) {
-                
+
                 $("#uvIndex").addClass("uv-extreme text-white p-1 rounded");
             }
 
@@ -111,6 +123,8 @@ function retrieveUVfiveday(lattitude, longitude) {
 
                 $("#forecastHumidity" + i).text("Humidity: " + oneCallResults.daily[i].humidity + "%");
             }
+
+            $("#display-weather").removeClass("d-none");
         })
 }
 
@@ -118,15 +132,18 @@ function retrieveUVfiveday(lattitude, longitude) {
 // Search city onclick of search button
 $("#searchBtn").on("click", function () {
 
-    var citySearched = $("#searchCity").val();
+    var citySearched = titleCase($("#searchCity").val());
 
-    var createBtn = $(`<button class="list-group-item" data-city="${citySearched}">${citySearched}</button>`);
+    if (!savedSearch.includes(citySearched)) {
 
-    $("#btnContainer").prepend(createBtn);
+        var createBtn = $(`<button class="list-group-item" data-city="${citySearched}">${citySearched}</button>`);
 
-    savedSearch.push(citySearched);
+        $("#btnContainer").prepend(createBtn);
 
-    localStorage.setItem("Previous Searches", JSON.stringify(savedSearch));
+        savedSearch.push(citySearched);
+
+        localStorage.setItem("Previous Searches", JSON.stringify(savedSearch));
+    }
 
     retrieveWeather(citySearched);
 });
@@ -144,6 +161,10 @@ $("#clearBtn").on("click", function () {
 
     localStorage.removeItem("Previous Searches");
 
+    savedSearch = []
+    
     $(".list-group-item").remove();
+
+    $("#display-weather").addClass("d-none");
 });
 
