@@ -3,7 +3,7 @@ var apiKey = "c91773251f63db01df3cd6ca70045ea5";
 // Locage storage
 var savedSearch = JSON.parse(localStorage.getItem("PreviousForecastSearches")) || [];
 
-// Capitalizes search term, solution found on https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/
+// Adds title case to search term(s), solution found on https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/
 function titleCase(str) {
 
     str = str.toLowerCase().split(' ');
