@@ -1,4 +1,4 @@
-# weather-dashboard
+# 06-weather-dashboard
 
 ## Project Goals
 
@@ -27,8 +27,8 @@
 
 ## Project Location
 
-* [GitHub Repo](https://github.com/Gavin867/weather-dashboard)
-* [Published Site](https://gavin867.github.io/weather-dashboard/)
+* [GitHub Repo](https://github.com/Gavin867/06-weather-dashboard)
+* [Published Site](https://gavin867.github.io/06-weather-dashboard/)
 
 ## Project Demo
 
