@@ -32,4 +32,4 @@
 
 ## Project Demo
 
-![Demo](https://github.com/Gavin867/weather-dashboard/blob/main/Assets/wd-demo-1200px.gif?raw=true)
+![Demo](https://github.com/Gavin867/06-weather-dashboard/blob/main/Assets/Images/wd-demo-1200px.gif)
