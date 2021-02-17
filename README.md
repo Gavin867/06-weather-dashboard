@@ -1,4 +1,4 @@
-# 06-weather-dashboard
+# The Weather Brief
 
 ## Project Goals
 
