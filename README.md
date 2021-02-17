@@ -27,9 +27,9 @@
 
 ## Project Location
 
-* [GitHub Repo](https://github.com/Gavin867/06-weather-dashboard)
-* [Published Site](https://gavin867.github.io/06-weather-dashboard/)
+* [GitHub Repo](https://github.com/Gavin867/The_Weather_Brief)
+* [Published Site](https://gavin867.github.io/The_Weather_Brief/)
 
 ## Project Demo
 
-![Demo](https://github.com/Gavin867/06-weather-dashboard/blob/main/Assets/Images/wd-demo-1200px.gif)
+![Demo](https://github.com/Gavin867/The_Weather_Brief/blob/main/Assets/Images/wd-demo-1200px.gif)
